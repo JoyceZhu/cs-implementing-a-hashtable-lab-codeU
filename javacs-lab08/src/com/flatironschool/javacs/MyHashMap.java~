@@ -45,7 +45,7 @@ public class MyHashMap<K, V> extends MyBetterMap<K, V> implements Map<K, V> {
         List<MyLinearMap<K, V>> oldMaps = maps;
         makeMaps(maps.size() * 2); // want to double the number of maps we have
         for (MyLinearMap<K, V> m: oldMaps)
-            for (Entry<K, V> entry: m.getEntries())
+            for (Entry<K, V> entry: map.getEntries())
                 put(entry.getKey(), entry.getValue());
 	}
 
